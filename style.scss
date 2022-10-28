@@ -1,0 +1,1375 @@
+@import "mixins";
+@import "global";
+@import "reset";
+
+#header {
+  z-index: 1001;
+  .header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding-top: 20px;
+    &--line {
+      width: 100%;
+      height: 1px;
+      background: #AFBFC7;
+      position: absolute;
+      top: 110px;
+      right: 0px;
+    }
+
+    h1 {
+      @include title;
+      width: 100%;
+
+      span {
+        color: $AdditionalColor;
+      }
+    }
+
+    &--nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 900px;
+      a{
+        &:hover{
+          transition: .4s;
+          transform:  scale(1.1);
+          text-shadow: 0 0 10px lightcoral, 0 0 10px lightcoral, 0 0 20px lightcoral, 0 0 40px lightcoral,;
+        }
+      }
+      ion-icon {
+        color: $AdditionalColor;
+        font-size: 20px;
+        margin-right: 5px;
+      }
+
+      a {
+        color: $MaimColor;
+        font-size: 18px;
+      }
+
+      &__title {
+        display: flex;
+        align-items: center;
+        margin: 0 30px;
+
+      }
+
+      &__tell{
+        a{
+          width: 150px;
+
+        }
+      }
+
+      &__tel {
+        display: flex;
+
+        ion-icon {
+          margin-bottom: 20px;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          a{
+            width: 150px;
+          }
+        }
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+
+        h2 {
+          @include pf;
+          color: $MaimColor;
+          width: 115px;
+
+        }
+      }
+
+      button {
+        @include btn;
+        width: 220px;
+        height: 43px;
+        font-size: 15px;
+      }
+    }
+
+  }
+
+}
+
+#hero {
+  background: url("../img/hero.png") no-repeat bottom/cover;
+  min-height: 140vh;
+
+  .hero {
+    &--nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 130px;
+
+      button {
+        @include btn;
+        color: $AdditionalColor;
+        background: $MaimColor;
+      }
+
+      a {
+        @include pf;
+        font-weight: 700;
+        &:hover{
+          transition: .4s;
+          transform:  scale(1.1);
+          color: $AdditionalColor;
+          text-shadow: 0 0 10px #ce5252, 0 0 20px #dc4242, 0 0 40px #2fd92f, 0 0 80px #26ab26, 0 0 120px lightgreen;
+        }
+      }
+    }
+
+    h1 {
+      @include pf;
+      font-size: 48px;
+      font-weight: 600;
+      margin: 88px 0 22px 0;
+    }
+
+    h2 {
+      @include titles;
+      color: $AdditionalColor;
+      text-align: center;
+    }
+
+    &--blocks {
+      padding-top: 344px;
+      @include df;
+      justify-content: center;
+
+      &__block {
+        position: relative;
+        width: 253px;
+        height: 237px;
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(239, 251, 255, 0.5) 100%);
+        box-shadow: 0 8px 16px #E0F5FF;
+        border-radius: 20px;
+        margin: 20px;
+        &:hover{
+          transition: .4s;
+          transform: scale(1.1) translateY(-12px) skewY(-1deg);
+          box-shadow: 0 0 10px #ce5252, 0 0 20px #dc4242, 0 0 40px #2fd92f, 0 0 80px #26ab26, 0 0 120px lightgreen;
+        }
+
+        h3 {
+          position: absolute;
+          top: 10px;
+          left: 26px;
+          display: flex;
+          align-items: center;
+          @include titles;
+          text-align: start;
+          border-bottom: 1px solid #AAC8D7;
+          padding-bottom: 16px;
+
+          ion-icon {
+            margin-right: 10px;
+            color: #45B2EA;
+          }
+        }
+
+        p {
+          position: absolute;
+          @include pf;
+          color: $black;
+          text-align: start;
+          bottom: 20px;
+          left: 20px;
+
+        }
+      }
+    }
+  }
+}
+
+#install {
+  background: url("../img/mountain.png") no-repeat bottom/cover;
+  min-height: 90vh;
+
+  .install {
+    position: relative;
+
+    h1 {
+      @include titles;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    &--slider {
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 20px;
+
+      &__block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 168px;
+        height: 163px;
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(239, 251, 255, 0.5) 100%);
+        box-shadow: 0 8px 16px #E0F5FF;
+        border-radius: 20px;
+        position: relative;
+        margin-bottom: 250px;
+
+        img {
+          position: absolute;
+          top: 20px;
+        }
+
+        h1 {
+          @include titles;
+          font-size: 20px;
+          position: absolute;
+          bottom: 20px;
+        }
+      }
+
+
+    }
+
+    &--btn {
+      position: absolute;
+      bottom: 150px;
+      left: 45%;
+      z-index: 1000;
+
+      button {
+        @include btn();
+      }
+    }
+  }
+
+}
+
+#product {
+  background: #F1F3F4;
+
+  .product {
+    &--title {
+      h1 {
+        @include titles();
+        font-size: 44px;
+        text-align: center;
+
+      }
+
+      &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+
+        .left-btn {
+          @include btn();
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+
+        }
+
+        .center-btn {
+          @include btn();
+          border-radius: 0;
+          background: transparent;
+        }
+
+        .right-btn {
+          @include btn();
+          background: transparent;
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+
+        }
+
+        button {
+          border: 1px solid #BDCFDB;
+          color: $black !important;
+
+        }
+      }
+
+      p {
+        @include titles();
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+    &--blocks {
+      padding: 40px 0;
+      @include df();
+      flex-wrap: wrap;
+
+      &__block {
+        width: 253px;
+        height: 650px;
+        background: #FFFFFF;
+        border-radius: 20px;
+        margin: 15px;
+
+        img {
+          margin: 16px 0 0 45px;
+        }
+
+        h1 {
+          @include titles();
+          font-size: 20px;
+          margin: 26px 0 10px 22px;
+        }
+
+        &--subtitle {
+          margin-left: 22px;
+
+          p {
+            @include prf();
+            font-size: 14px;
+            text-align: start;
+            color: $black;
+          }
+        }
+
+        &--btn {
+          margin-left: 22px;
+
+          p {
+            @include prf();
+            font-size: 11px;
+            margin-top: 16px;
+          }
+
+          div {
+            display: flex;
+            justify-content: flex-start;
+            margin: 6px 0 12px 0;
+
+            button {
+              @include center-btn();
+            }
+
+            .right-btn {
+              @include right-btn()
+            }
+
+            .left-btn {
+              @include left-btn()
+            }
+
+            .right-btn {
+              @include right-btn()
+            }
+          }
+        }
+
+        h2 {
+          margin-left: 22px;
+          @include titles();
+          margin-bottom: 16px;
+
+          span {
+            color: #D02726;
+            text-decoration-line: line-through;
+            margin-right: 10px;
+          }
+        }
+
+        h3 {
+          @include prf();
+          text-align: center;
+          font-size: 12px;
+          padding: 5px 0;
+          background: #FFD6D6;
+          border-radius: 20px;
+          width: 211px;
+          margin-left: 22px;
+        }
+
+        &--buttons {
+          @include btn();
+          border: 1px solid #AAC8D7;
+          background: none !important;
+          color: $black !important;
+          width: 211px;
+          margin: 22px 0 18px 22px;
+
+        }
+
+        &--button {
+          @include btn();
+          width: 211px;
+          margin-left: 22px;
+        }
+      }
+    }
+  }
+}
+
+#process {
+  background: url("../img/mountain2.png") no-repeat center/cover;
+  min-height: 100vh;
+
+  .process {
+    padding: 51px 0 0 0;
+
+    h1 {
+      @include title();
+      text-align: center;
+    }
+
+    &--block {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+
+      p {
+        @include pf();
+        text-align: start;
+        margin-bottom: 104px;
+      }
+
+      h2 {
+        font-size: 20px;
+        text-align: start;
+        margin: 24px 0;
+        color: $MaimColor;
+
+        ion-icon {
+          margin-right: 7px;
+          color: $AdditionalColor;
+        }
+      }
+    }
+  }
+}
+
+#mounting {
+  background: #AFBFC7;
+
+  .mounting {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &--block {
+      position: absolute;
+      top: -63px;
+      width: 1098px;
+      height: 378px;
+      background: #DDEFFF;
+      box-shadow: 0 8px 24px rgba(0, 88, 140, 0.22);
+      border-radius: 30px;
+      margin-bottom: 30px;
+
+      h1 {
+        @include titles();
+        text-align: center;
+        padding-top: 30px;
+      }
+
+      &__outs {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        &--out {
+          margin: 22px 0;
+          width: 30%;
+          display: flex;
+          align-items: center;
+
+          div {
+            @include df();
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(239, 251, 255, 0.5) 100%);
+            box-shadow: 0 8px 16px #E0F5FF;
+            border-radius: 20px;
+          }
+
+          h2 {
+            @include prf();
+            font-size: 15px;
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+#work {
+  background: #AFBFC7;
+    .work {
+      h1{
+        @include titles();
+        text-align: center;
+        padding: 378px 0 40px 0;
+
+      }
+
+      &--content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        img{
+          margin: 6px 6px 50px 6px;
+        }
+
+      }
+      &--btn{
+        display: flex;
+        justify-content: center;
+        padding: 60px 0 ;
+        button{
+          @include btn();
+        }
+    }
+  }
+}
+
+#question{
+  background: url("../img/mountain.png") no-repeat bottom/cover;
+  min-height: 110vh;
+
+  .question{
+     h1{
+       @include titles();
+       text-align: center;
+       padding-top: 30px;
+     }
+    &--accord{
+      display: flex;
+      justify-content: center;
+    }
+    &--btn{
+      display: flex;
+      justify-content: center;
+      button{
+        @include btn();
+        background: none;
+        color: $black;
+      }
+    }
+    &--modal{
+      z-index: 9999999!important;
+      background: none;
+      display: none;
+      &__bg{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: linear-gradient(-20deg, #777736, #413737, #413737, #777736,);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(3px);
+        &--square{
+          position: relative;
+          background: transparent;
+          border: 2px solid $AdditionalColor;
+          width: 1140px;
+          height: 600px;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: .8s alternate key linear;
+
+          @keyframes key {
+            0% {
+              opacity: 0;
+              transform: scale(0);
+            }
+            25%{
+              opacity: 0.3;
+              transform: scale(0.3);
+            }
+            50%{
+              opacity: 0.6;
+              transform: scale(0.6);
+            }
+            75%{
+              opacity: 0.9;
+              transform: scale(0.9);
+            }
+            90%{
+              opacity: 1;
+              transform: scale(1.2);
+            }
+            100%{
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+          &__close{
+            font-size: 35px;
+            color: $AdditionalColor;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            cursor: pointer;
+            animation: .7s keys alternate linear;
+          }
+
+          @keyframes keys {
+            0% {
+              opacity: 1;
+              transform: scale(1);
+            }
+            25%{
+              opacity: 1;
+              transform: scale(1.2);
+            }
+            50%{
+              opacity: 0.9;
+              transform: scale(0.9);
+            }
+            75%{
+              opacity: 0.6;
+              transform: scale(0.6);
+            }
+            90%{
+              opacity: 0.3;
+              transform: scale(0.3);
+            }
+            100%{
+              opacity: 0;
+              transform: scale(0);
+            }
+          }
+
+          h1{
+             font-size: 70px;
+             color: #222222;
+             letter-spacing: 5px;
+             font-weight: 500;
+             font-family: "Segoe Script",sans-serif;
+             cursor:  pointer;
+
+             &:hover span{
+               color: #FFF;
+               text-shadow: 0 0 10px #FFF,
+               0 0 20px #FFF,
+               0 0 40px #FFF,
+               0 0 80px #FFF,
+               0 0 120px gold;
+
+             }
+             &:hover span:nth-child(1){
+               margin-right: 10px;
+             }
+             &:hover span:nth-child(1):after{
+               content: "'";
+             }
+             &:hover span:nth-child(2)  {
+               margin-left: 40px;
+             }
+             span {
+               transition: .5s;
+
+
+             }
+           }
+
+          &__ball{
+            position: absolute;
+            bottom: 20px;
+            font-size: 80px;
+            ion-icon{
+              border-radius: 50%;
+              animation: 6s ball alternate ;
+              &:hover{
+                transition: .5s;
+                box-shadow:  0 0 10px #b9b96d,
+                0 0 20px #b9b96d,
+                0 0 40px #b9b96d,
+                0 0 80px #b9b96d,
+                0 0 120px #b9b96d;
+              }
+              @keyframes ball {
+                0%{
+                  transform: translateY(-800px);
+
+                }
+                5%{
+                  box-shadow: 0 0 10px #b9b96d,
+                  0 0 20px #b9b96d,
+                  0 0 40px #b9b96d,
+                  0 0 80px #b9b96d,
+                  0 0 120px #b9b96d;
+                }
+                10%{
+                  transform: translateY(-670px);
+
+
+                }
+                20% {
+                  transform: translateY(0);
+                }
+                30%{
+                  transform: translateY(-630px);
+
+                }
+                40%{
+                  transform: translateY(0);
+                }
+                50%{
+                  transform: translateY(-450px);
+
+                }
+                60%{
+                  transform: translateY(0);
+
+                }
+                65%{
+                  transform: translateY(-295px);
+
+                }
+                70%{
+                  transform: translateY(0);
+
+                }
+                75%{
+                  transform: translateY(-190px);
+
+                }
+                80%{
+                  transform: translateY(0);
+
+                }
+                85%{
+                  transform: translateY(-100px);
+
+                }
+                90%{
+                  transform: translateY(0);
+                }
+                92.5%{
+                  transform: translateY(-65px);
+                }
+                95%{
+                  transform: translateY(0);
+
+                }
+                97.5%{
+                  transform: translateY(-30px);
+
+                }
+                100%{
+                  transform: translateY(0);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#certificate {
+  background: #F7F9FA;
+  position: relative;
+
+  .certificate {
+
+    h1 {
+      @include titles();
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    &--swiper {
+      display: flex;
+      justify-content: space-between;
+
+      &__block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 150px;
+        img{
+          width: 45%;
+        }
+      }
+    }
+
+    &--block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin: 15px;
+      }
+    }
+  }
+}
+
+#review{
+  background: url("../img/review.png") no-repeat bottom/cover;
+  min-height: 120vh;
+
+  .review{
+    h1{
+      @include title();
+      text-align: center;
+      padding: 60px 0 54px 0;
+    }
+    &--btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      &__left{
+        @include left-btn();
+        font-size: 16px;
+        padding: 10px 25px;
+
+      }
+      &__right{
+        @include right-btn();
+        font-size: 16px;
+        padding: 10px 25px;
+      }
+    }
+    &--block{
+      @include df();
+
+      a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        h1{
+          position: absolute;
+          @include title();
+          font-size: 20px;
+          bottom: 86px;
+        }
+        p{
+          position: absolute;
+          @include pf();
+          font-style: italic;
+          bottom: 66px;
+
+        }
+        &__btns{
+          position: absolute;
+          width: 54px !important;
+          height: 54px !important;
+        }
+        button{
+          position: absolute;
+          top: 24%;
+          left: 45%;
+          width: 78px;
+          height: 78px;
+          border-radius: 50%;
+          background: none;
+          backdrop-filter: blur(5px);
+          border: 1px solid $MaimColor;
+          ion-icon{
+            font-size: 40px;
+            color: $MaimColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer{
+  padding-top: 90px;
+  .footer{
+    display: flex;
+    justify-content: space-evenly;
+    h1 {
+      @include title;
+
+      span {
+        color: $AdditionalColor;
+      }
+    }
+
+    &--nav{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      a{
+        @include pf();
+        margin: 4px 0;
+        &:hover{
+          transition: .4s;
+          transform:  scale(1.1);
+          color: $AdditionalColor;
+          text-shadow: 0 0 10px #ce5252, 0 0 20px #dc4242, 0 0 40px #2fd92f, 0 0 80px #26ab26, 0 0 120px lightgreen;
+        }
+      }
+      &__icon{
+        a{
+          color: white;
+          margin: 12px;
+          &:hover{
+            transition: .4s;
+            transform:  scale(1.1);
+            color: $AdditionalColor;
+            text-shadow: 0 0 10px #ce5252, 0 0 20px #dc4242, 0 0 40px #2fd92f, 0 0 80px #26ab26, 0 0 120px lightgreen;
+          }
+
+          ion-icon{
+            font-size: 30px;
+            &:hover{
+              transition: .4s;
+              transform:  scale(1.5) rotate(-360deg);
+              color: $AdditionalColor;
+              text-shadow: 0 0 10px #ce5252, 0 0 20px #dc4242, 0 0 40px #2fd92f, 0 0 80px #26ab26, 0 0 120px lightgreen;
+            }
+          }
+        }
+      }
+
+    }
+    &--call{
+      &__nav{
+        margin: 5px 0;
+        a{
+          @include pf();
+          &:hover{
+            transition: .4s;
+            transform:  scale(1.1);
+            color: $AdditionalColor;
+            text-shadow: 0 0 10px #ce5252, 0 0 20px #dc4242, 0 0 40px #2fd92f, 0 0 80px #26ab26, 0 0 120px lightgreen;
+          }
+        }
+        ion-icon{
+          color: $AdditionalColor;
+          margin-right: 10px;
+          &:hover{
+            transition: .4s;
+            transform:  scale(1.5) rotate(360deg);
+            color: $AdditionalColor;
+            text-shadow: 0 0 10px #ce5252, 0 0 20px #dc4242, 0 0 40px #2fd92f, 0 0 80px #26ab26, 0 0 120px lightgreen;
+          }
+        }
+      }
+      p{
+        @include pf();
+        text-align: start;
+        margin: 30px 0 0 15px;
+      }
+    }
+
+  }
+}
+
+
+
+.accordion{
+  display: inline-block;
+  text-align: left;
+  margin: 1%;
+  width: 70%;
+  a {
+    display: flex;
+    justify-content: space-between;
+    ion-icon{
+        color: #45B2EA;
+    }
+  }
+  &:hover{
+
+    // max-height technique
+    .accordion-content{
+      // If use the "height: auto", the effect not works. Is necessary some value for the CSS create a CSS animate, and we can use "max-height" with a great value for emulate this effect.
+      max-height: 300px;
+    }
+
+  }
+}
+
+.accordion-content{
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  background: none;
+  overflow: hidden;
+  // "height: 0" not work with css transitions
+  max-height: 0;
+}
+
+.accordion-inner{
+  padding: 0 15px;
+}
+
+.accordion-toggle{
+  -webkit-transition: background .1s linear;
+  -moz-transition: background .1s linear;
+  -ms-transition: background .1s linear;
+  -o-transition: background .1s linear;
+  transition: background .1s linear;
+  background: none;
+  border: 1px solid $MaimColor;
+  border-radius: 3px;
+  color: $black;
+  display: block;
+  font-size: 30px;
+  margin: 0 0 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover{
+    background: white;
+    color: $black;
+    ion-icon{
+      transition: .5s;
+      transform: rotate(-90deg);
+    }
+  }
+
+}
+
+
+$icon-size:80px;
+$w: 300px;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@mixin lightsaber($color){
+  background:mix($color,#fff,10%);
+  box-shadow:$color 0px 0px 0px 2px;
+  &:hover {
+    box-shadow:$color 0px 0px 20px 2px;
+    text-shadow:$color 0px 0px 6px,$color 0px 0px 10px;
+  }
+}
+
+html, body {
+  background:#222;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+#container {
+  width: $icon-size;
+  height:$icon-size;
+  position:absolute;
+  top:0%;
+  right: -320%;
+}
+
+#burger {
+  display: none ;
+  cursor:pointer;
+  opacity:0;
+  animation:fadein 0.2s ease 1s forwards;
+  overflow:hidden;
+  position:relative;
+  width:100%;
+  height:100%;
+  %burgersection {
+    display:block;
+    position:absolute;
+    right: 0;
+    transform:translate(-50%,-50%) rotate(0deg);
+    height:10%;
+    width:70%;
+    transform-origin:50% 50%;
+    transition: top 0.4s ease 0.4s,
+    transform 0.4s ease 0.4s;
+    &:before, &:after {
+      content:"";
+      display:block;
+      height:40%;
+      background:white;
+      position:absolute;
+      top:50%;
+      transform:translate(0%,-45%);
+      transition:background 0.2s ease,
+      box-shadow 0.2s ease;
+    }
+    &:before {
+      left:0;
+      width:calc(-1px + 75%);
+      border-radius:10px 0 0 10px;
+    }
+    &:after {
+      right:0;
+      width:calc(-1px + 25%);
+    }
+  }
+
+  &:hover {
+    .bun {
+      &.top:before {
+        background:#FEE;
+        box-shadow:#F00 0 0 10px 1px;
+      }
+      &.bottom:before {
+        background:#DFF;
+        box-shadow:#0FF 0 0 10px 1px;
+      }
+    }
+    .filling {
+      &:before {
+        background:#EFE;
+        box-shadow:#0F0 0 0 10px 1px;
+      }
+    }
+  }
+
+  .bun {
+    @extend %burgersection;
+    &.top {
+      top:25%;
+    }
+    &.bottom {
+      top:75%;
+    }
+  }
+  .filling {
+    @extend %burgersection;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(180deg);
+    animation:green-ls-out 0.8s ease forwards;
+
+  }
+
+  &.active {
+    .bun {
+      border-radius: 3px;
+      top:50%;
+      transition: top 0.4s ease,
+      transform 0.4s ease;
+      &.top {
+        transform:translate(-50%,-50%) rotate(-225deg);
+      }
+      &.bottom {
+        transform:translate(-50%,-50%) rotate(405deg);
+      }
+    }
+    .filling {
+      transform: translate(-50%,-50%) rotate(-90deg);
+      animation:green-ls-in 0.8s ease forwards;
+    }
+  }
+}
+
+nav {
+  background: $black;
+  &.show {
+    transform:translatex(0%);
+  }
+  font-family:Open Sans;
+  color:white;
+  background:#111;
+  position:absolute;
+  transform:translatex(-150%);
+  transition:transform 0.2s ease;
+  top:$icon-size;
+  bottom:0;
+  padding-right:16px;
+  width:$w;
+  ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    //font-weight:bolder;
+    li {
+      @include lightsaber(#4df);
+      font-size:1.75em;
+      line-height:1.25em;
+      padding: 0;
+      margin:16px 0 0 0;
+      width:0;
+      border-radius:0 100px 100px 0;
+      transition:width 0.2s ease,
+      padding 0.2s ease,
+      color 0.2s ease,
+      text-shadow 0.2s ease;
+      &:hover {
+        width:100%;
+        padding:0 16px 0 0;
+        color:black;
+      }
+      a {
+        display:block;
+        text-decoration:none;
+        width:$w;
+        color:inherit;
+        background: $black;
+        padding-left:16px;
+      }
+      &.green {
+        @include lightsaber(#0F0);
+      }
+      &.red {
+        @include lightsaber(#F00);
+      }
+      &.purple {
+        @include lightsaber(#c0c);
+      }
+      &.yellow {
+        @include lightsaber(#FF0);
+      }
+    }
+  }
+}
+
+@keyframes green-ls-in {
+  0% {
+    transform: translate(-50%,-50%) rotate(180deg); }
+  50% {
+    transform: translate(-50%,-50%) rotate(-90deg); }
+  100% {
+    transform: translate(-50%,-50%) rotate(-90deg) translate(200%,0%);}
+}
+
+@keyframes green-ls-out {
+  0% {
+    transform: translate(-50%,-200%) rotate(-90deg);}
+  50% {
+    transform: translate(-50%,-50%) rotate(-90deg); }
+
+  100% {
+    transform: translate(-50%,-50%) rotate(180deg); }
+}
+
+@keyframes fadein {
+  from {
+    Opacity:0;
+  }
+  to {
+    Opacity:1;
+  }
+}
+
+@mixin sp-layout {
+  @media screen and (max-width: 950px) {
+    @content;
+  }
+}
+
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  transform: rotate(-45deg);
+}
+
+.star {
+  $star-count: 50;
+  --star-color: var(--primary-color);
+  --star-tail-length: 6em;
+  --star-tail-height: 2px;
+  --star-width: calc(var(--star-tail-length) / 6);
+  --fall-duration: 9s;
+  --tail-fade-duration: var(--fall-duration);
+
+  position: absolute;
+  top: var(--top-offset);
+  left: 0;
+  width: var(--star-tail-length);
+  height: var(--star-tail-height);
+  color: var(--star-color);
+  background: linear-gradient(45deg, currentColor, transparent);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px currentColor);
+  transform: translate3d(104em, 0, 0);
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+
+  @include sp-layout {
+    // For mobile performance, tail-fade animation will be removed QAQ
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+  }
+
+  @for $i from 1 through $star-count {
+    &:nth-child(#{$i}) {
+      --star-tail-length: #{random_range(500em, 750em) / 100};
+      --top-offset: #{random_range(0vh, 10000vh) / 100};
+      --fall-duration: #{random_range(6000, 12000s) / 1000};
+      --fall-delay: #{random_range(0, 10000s) / 1000};
+    }
+  }
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: calc(var(--star-width) / -2);
+    width: var(--star-width);
+    height: 100%;
+    background: linear-gradient(45deg, transparent, currentColor, transparent);
+    border-radius: inherit;
+    animation: blink 2s linear infinite;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+
+@keyframes tail-fade {
+  0%, 50% {
+    width: var(--star-tail-length);
+    opacity: 1;
+  }
+
+  70%, 80% {
+    width: 0;
+    opacity: 0.4;
+  }
+
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.6;
+  }
+}

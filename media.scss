@@ -1,0 +1,375 @@
+@media (max-width: 1440px){
+
+}
+@media (max-width: 1200px){
+
+}
+@media (max-width: 1024px){
+  .header{
+    h1{
+      font-size: 23px !important;
+    }
+    &--nav{
+      width: 800px !important;
+    }
+  }
+  .hero{
+    &--nav {
+      flex-wrap: wrap;
+      a{
+        margin: 10px;
+      }
+    }
+    &--blocks{
+      flex-wrap: wrap;
+    }
+  }
+  .mounting{
+    &--block{
+      top: -108px !important;
+      width: 940px !important;
+    }
+  }
+  .work{
+    &--content{
+      img{
+        margin: 55px !important;
+        width: 100% !important;
+      }
+    }
+  }
+  .question{
+    &--modal {
+      &__bg {
+        &--square {
+          width: 90% !important;
+        }
+      }
+    }
+  }
+  .review{
+    &--block{
+      flex-wrap: wrap;
+      justify-content: center !important;
+    }
+  }
+}
+@media (max-width: 992px){
+  .certificate{
+    &--block{
+      left: 12% !important;
+    }
+  }
+  .header{
+    &--nav{
+      a{
+        font-size: 15px !important;
+      }
+    }
+  }
+  .accordion-toggle{
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px){
+  #container{
+    right: -230%;
+  }
+  #burger{
+    display: block;
+  }
+  .header{
+    &--line{
+      display: none;
+    }
+    &--nav{
+      display: none !important;
+    }
+  }
+  .hero{
+    h1{
+      font-size: 30px !important;
+    }
+    h2{
+      font-size: 20px !important;
+    }
+  }
+  .mounting{
+    &--block{
+      width: 100% !important;
+      position: relative;
+      height: 500px !important;
+      h1{
+        font-size: 16px !important;
+      }
+      &__outs{
+        &--out{
+          width: 45% !important;
+        }
+      }
+    }
+  }
+
+  .certificate{
+    &--block{
+      left: 3% !important;
+    }
+  }
+  .product{
+    &--title{
+      p{
+        font-size: 12px !important;
+        margin-left: 25px;
+      }
+
+    }
+    &--blocks{
+      justify-content: center !important;
+
+
+    }
+  }
+  .work{
+    h1{
+      padding: 444px 0 40px 0 !important;
+    }
+  }
+  .footer{
+    h1{
+      margin-left: 25px;
+      font-size: 28px !important;
+    }
+    a{
+      font-size: 12px !important;
+    }
+    p{
+      font-size: 12px !important;
+      margin: 20px 0 0 15px !important;
+    }
+  }
+  .accordion-toggle{
+      font-size: 12px;
+  }
+}
+@media (max-width: 576px){
+  .work{
+    h1{
+      padding: 1000px 0 40px 0 !important;
+    }
+  }
+  .header{
+    h1{
+      font-size: 22px !important;
+    }
+  }
+  .hero{
+    h1{
+      font-size: 22px !important;
+    }
+    &--nav{
+      margin-left: 22px;
+    }
+  }
+  .install{
+
+  }
+  .mounting{
+    &--block{
+      top: -40px !important;
+      height: 1000px !important;
+      width: 90% !important;
+      &__outs{
+        &--out{
+          flex-direction: column !important;
+          width: 83% !important;
+          margin-top: 15px !important;
+        }
+      }
+    }
+  }
+
+  .left-btn{
+    font-size: 11px !important;
+  }
+  .center-btn{
+    font-size: 11px !important;
+  }
+  .right-btn{
+    font-size: 11px !important;
+  }
+  .process{
+    h1{
+      font-size: 20px !important;
+    }
+    &--block{
+      flex-direction: column;
+
+      h2{
+        font-size: 16px !important;
+      }
+      p{
+        font-size: 10px !important;
+        margin-bottom: 50px !important; ;
+        margin-top: 10px;
+      }
+    }
+  }
+  .certificate{
+    &--block{
+      flex-wrap: wrap;
+    }
+  }
+  .review{
+    &--block{
+      img{
+        width: 90% !important;
+      }
+      p{
+        font-size: 10px !important;
+      }
+      h1{
+        bottom: 63px !important;
+        font-size: 12px !important;
+      }
+    }
+  }
+  .footer{
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 451px){
+  #container{
+    right: -185%;
+  }
+ .header{
+   h1{
+     font-size: 16px !important;
+     margin-left: 36px;
+   }
+   &--nav{
+     button{
+       padding: 8px 11px !important;
+       font-size: 10px !important;
+     }
+   }
+ }
+  .hero{
+    h1{
+      font-size: 16px !important;
+    }
+    h2{
+      font-size: 15px !important;
+    }
+  }
+  .install{
+    h1{
+      font-size: 16px !important;
+
+    }
+  }
+  .product{
+    &--title{
+      h1{
+        font-size: 16px !important;
+      }
+      .left-btn{
+        padding: 5px 10px !important;
+      }
+      .center-btn{
+        padding: 5px 10px !important;
+      }
+      .right-btn{
+        padding: 5px 10px !important;
+      }
+    }
+  }
+  .footer{
+    flex-direction: column !important;
+    &--nav{
+      margin: 27px 0 !important;
+    }
+    &--call{
+      padding-bottom: 10px;
+      &__nav{
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+@media (max-width: 415px){
+  #container{
+    right: -160%;
+  }
+  .question{
+    &--modal{
+      &__bg{
+        &--square{
+          h1{
+            font-size: 40px !important;
+          }
+        }
+      }
+    }
+  }
+  .accordion-inner{
+    p{
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: 400px){
+  .install{
+    h1{
+      font-size: 16px !important;
+
+    }
+  }
+  .mounting{
+    &--block{
+
+    }
+  }
+  .review{
+    h1{
+      font-size: 16px !important;
+    }
+    &--block{
+      h1{
+        font-size: 11px !important;
+      }
+      p{
+        font-size: 8px !important;
+      }
+    }
+  }
+}
+@media (max-width: 380px){
+  #container{
+    right: -140%;
+  }
+  .process{
+    &--block{
+      img{
+        width: 90%;
+      }
+    }
+  }
+}
+@media (max-width: 375px){
+
+}
+@media (max-width: 320px){
+  #container{
+    right: -110%;
+  }
+  .mounting{
+    &--block{
+      &__outs{
+        &--out{
+          margin: 8px 0 !important;
+        }
+      }
+    }
+  }
+}
+

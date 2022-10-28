@@ -1,0 +1,27 @@
+$main-family:  'futura new', sans-serif;
+$bg: white;
+
+$raleway: 'Raleway', sans-serif;
+$spectral: 'Spectral', serif;
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+body{
+  font-family: $main-family;
+  background: $bg;
+  &.overflow {
+    overflow: hidden;
+  }
+}
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
